@@ -10,8 +10,8 @@ sitemap:
 
 <div id="describe-text">
 	<p>
-		Career wise, I'm a senior full stack engineer. 
-		Can write in Swift and Objective-C for iOS, Kotlin & Java for Android, Dart for flutter and Ruby for Rails.
+		Career wise, I'm a senior full stack engineer. <br>
+		Can write in Swift and Objective-C for iOS, Kotlin & Java for Android, Dart for flutter and Ruby for Rails. <br>
 		Doing also some devops stuffs, so 'am knowledgeable also of AWS, DigitalOcean and Microsoft Azure.
 	</p>
 	<p>Personal life, I'm a family man, who loves his wife and son. Melophile. Plays basketball.</p>
