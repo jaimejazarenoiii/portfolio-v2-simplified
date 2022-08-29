@@ -1,1 +1,1 @@
-[![Github Pages](https://github.com/jaimejazarenoiii/portfolio-v2-simplified/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jaimejazarenoiii/portfolio-v2-simplified/actions/workflows/pages/pages-build-deployment)
+[![Github Pages](https://github.com/jaimejazarenoiii/portfolio-v2-simplified/actions/workflows/pages/deploy-page/badge.svg)](https://github.com/jaimejazarenoiii/portfolio-v2-simplified/actions/workflows/pages/deploy-page)
