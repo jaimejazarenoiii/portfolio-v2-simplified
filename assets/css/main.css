@@ -7,7 +7,7 @@
     background-color: #FFF; }
 
   a {
-    color: #582804;
+    color: #007aff;
     font-weight: bold;
     text-decoration: none; }
 
@@ -42,7 +42,7 @@
       font-weight: 400; }
 
   strong {
-    color: #043458; }
+    color: #ff8500; }
 
   .wrapper {
     max-width: 800px;
@@ -58,7 +58,7 @@
   .logo {
     font-size: 300%;
     font-weight: 700;
-    color: #043458;
+    color: #ff8500;
     display: block; }
 
   .menu {
