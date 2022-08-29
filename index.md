@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Hello
-subtitle: My name is Pudhina
+subtitle: My name is Jaime III
 sitemap:
   priority: 0.9
 ---
 
-<img src="{{ '/assets/img/pudhina.jpg' | prepend: site.baseurl }}" id="about-img">
+<img src="{{ '/assets/img/avatar.png' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
-	<p>A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability</p>
-	<p>Fork and use the theme from the <strong> <a href="https://github.com/knhash/Pudhina"> repository</a> </strong></p>
+	<p>Career wise, I'm a senior full stack engineer. Can write in Swift, Kotlin, Dart for flutter, Ruby on Rails. Knowledgeable of Docker</p>
+	<p>Real life, I'm a family man, who loves his wife and son. Melophile. Plays basketball.</p>
 </div>
