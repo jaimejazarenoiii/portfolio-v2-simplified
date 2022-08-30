@@ -16,7 +16,9 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
 -   Install iterm2 `brew cask install iterm2`
 -   Install zsh `brew install zsh`
 -   Install oh-my-zsh 
-```sh -c "$(curl -fsSL[<https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh>](<https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh>))"```
+```
+  sh -c "$(curl -fsSL[<https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh>](<https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh>))"
+```
 -   Install [iterm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 -   Install spacehip:
     -   `git clone [<https://github.com/denysdovhan/spaceship-prompt.git>](<https://github.com/denysdovhan/spaceship-prompt.git>) "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1`
