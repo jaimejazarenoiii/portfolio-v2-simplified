@@ -13,7 +13,7 @@ A note, by the way, I'm using RxSwift for the reactive part and SnapKit for cons
 ```swift
 // Enum for validity check
 enum TextFieldStatus {
-    case valid, notValid
+    case valid, invalid
 }
 ```
 
@@ -29,8 +29,8 @@ protocol SigninViewModelInputs {
 protocol SigninViewModelOutputs {
     var isEmailValid: PublishRelay<TextFieldStatus> { get }
     var isPasswordValid: PublishRelay<TextFieldStatus> { get }
-    var emailNotValidErr: PublishRelay<String> { get }
-    var passwordNotValidErr: PublishRelay<String> { get }
+    var emailinvalidErr: PublishRelay<String> { get }
+    var passwordinvalidErr: PublishRelay<String> { get }
 }
 
 protocol SigninViewModelTypes {
@@ -54,8 +54,8 @@ class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewM
 
     var isEmailValid: PublishRelay<TextFieldStatus> = PublishRelay()
     var isPasswordValid: PublishRelay<TextFieldStatus> = PublishRelay()
-    var emailNotValidErr: PublishRelay<String> = PublishRelay()
-    var passwordNotValidErr: PublishRelay<String> = PublishRelay()
+    var emailinvalidErr: PublishRelay<String> = PublishRelay()
+    var passwordinvalidErr: PublishRelay<String> = PublishRelay()
 
     private var disposeBag: DisposeBag = DisposeBag()
 
@@ -72,29 +72,29 @@ class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewM
     init() {
         didChangeEmailProperty.map(isValidEmail(_:)).bind(to: isEmailValid).disposed(by: disposeBag)
 
-        isEmailValid.filter { $0 == .notValid }
+        isEmailValid.filter { $0 == .invalid }
             .map { _ in "Entered email is not valid." }
-            .bind(to: emailNotValidErr)
+            .bind(to: emailinvalidErr)
             .disposed(by: disposeBag)
 
         didChangePasswordProperty
-            .map { $0.count > 5 && $0.count < 21 ? .valid : .notValid }
+            .map { $0.count > 5 && $0.count < 21 ? .valid : .invalid }
             .bind(to: isPasswordValid)
             .disposed(by: disposeBag)
 
-        isPasswordValid.filter { $0 == .notValid }
+        isPasswordValid.filter { $0 == .invalid }
             .map { _ in "Password has to be from 6 to 20 characters long." }
-            .bind(to: passwordNotValidErr)
+            .bind(to: passwordinvalidErr)
             .disposed(by: disposeBag)
 
         isEmailValid.filter { $0 == .valid }
             .map { _ in "" }
-            .bind(to: emailNotValidErr)
+            .bind(to: emailinvalidErr)
             .disposed(by: disposeBag)
 
         isPasswordValid.filter { $0 == .valid }
             .map { _ in "" }
-            .bind(to: passwordNotValidErr)
+            .bind(to: passwordinvalidErr)
             .disposed(by: disposeBag)
     }
 
@@ -102,7 +102,7 @@ class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewM
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email) ? .valid : .notValid
+        return emailPred.evaluate(with: email) ? .valid : .invalid
     }
 }
 ```
@@ -126,7 +126,7 @@ Let's now breakdown the bindings in init()
 ```swift
 didChangeEmailProperty.map(isValidEmail(_:)).bind(to: isEmailValid).disposed(by: disposeBag)
 didChangePasswordProperty
-    .map { $0.count > 5 && $0.count < 21 ? .valid : .notValid }
+    .map { $0.count > 5 && $0.count < 21 ? .valid : .invalid }
     .bind(to: isPasswordValid)
     .disposed(by: disposeBag)
 ```
@@ -134,13 +134,13 @@ didChangePasswordProperty
 
 ##### Return error message if not valid
 ```swift
-isEmailValid.filter { $0 == .notValid }
+isEmailValid.filter { $0 == .invalid }
    .map { _ in "Entered email is not valid." }
-   .bind(to: emailNotValidErr)
+   .bind(to: emailinvalidErr)
    .disposed(by: disposeBag)
-isPasswordValid.filter { $0 == .notValid }
+isPasswordValid.filter { $0 == .invalid }
     .map { _ in "Password has to be from 6 to 20 characters long." }
-    .bind(to: passwordNotValidErrMssg)
+    .bind(to: passwordinvalidErrMssg)
     .disposed(by: disposeBag)
 ```
 - Now that isEmailValid and isPasswordValid are triggered, each now has a value, and I would like to return an error message if it is not valid.
@@ -149,12 +149,12 @@ isPasswordValid.filter { $0 == .notValid }
 ```swift
 isEmailValid.filter { $0 == .valid }
     .map { _ in "" }
-    .bind(to: emailNotValidErrMssg)
+    .bind(to: emailinvalidErrMssg)
     .disposed(by: disposeBag)
 
 isPasswordValid.filter { $0 == .valid }
     .map { _ in "" }
-    .bind(to: passwordNotValidErrMssg)
+    .bind(to: passwordinvalidErrMssg)
     .disposed(by: disposeBag)
 ```
 - Now we empty the error message if it's valid.
@@ -211,14 +211,14 @@ class SigninViewController: UIViewController {
             .bind(to: self.passwordTextField.rx.borderColor)
             .disposed(by: disposeBag)
 
-        viewModel.outputs.emailNotValidErrMssg.bind(to: emailErrLabel.rx.text).disposed(by: disposeBag)
-        viewModel.outputs.passwordNotValidErrMssg.bind(to: passwordErrLabel.rx.text).disposed(by: disposeBag)
+        viewModel.outputs.emailinvalidErrMssg.bind(to: emailErrLabel.rx.text).disposed(by: disposeBag)
+        viewModel.outputs.passwordinvalidErrMssg.bind(to: passwordErrLabel.rx.text).disposed(by: disposeBag)
 
-        viewModel.outputs.emailNotValidErrMssg
+        viewModel.outputs.emailinvalidErrMssg
             .map { $0.isEmpty }
             .bind(to: emailErrLabel.rx.isHidden)
             .disposed(by: disposeBag)
-        viewModel.outputs.passwordNotValidErrMssg
+        viewModel.outputs.passwordinvalidErrMssg
             .map { $0.isEmpty }
             .bind(to: passwordErrLabel.rx.isHidden)
             .disposed(by: disposeBag)
@@ -258,7 +258,7 @@ viewModel.outputs.isPasswordValid.map { $0.borderColor }
 
 ```swift
 enum TextFieldStatus {
-    case valid, notValid
+    case valid, invalid
 
     var borderColor: CGColor {
         switch self {
@@ -283,8 +283,8 @@ extension Reactive where Base: UITextField {
 
 Next, I want to display the errors from the viewModel if ever the input data is not valid. Here's how to do that: 
 ```swift
-viewModel.outputs.emailNotValidErrMssg.bind(to: emailErrLabel.rx.text).disposed(by: disposeBag)
-viewModel.outputs.passwordNotValidErrMssg.bind(to: passwordErrLabel.rx.text).disposed(by: disposeBag)
+viewModel.outputs.emailinvalidErrMssg.bind(to: emailErrLabel.rx.text).disposed(by: disposeBag)
+viewModel.outputs.passwordinvalidErrMssg.bind(to: passwordErrLabel.rx.text).disposed(by: disposeBag)
 ```
 
 Now our validation for the textField is done. Here's what it looks like:
