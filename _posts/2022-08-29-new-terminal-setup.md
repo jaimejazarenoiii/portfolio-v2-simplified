@@ -25,17 +25,26 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
     -   `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
 -   Install nerd font `brew tap homebrew/cask-fonts` then `brew install --cask font-hack-nerd-font`
 -   Install tmux `brew install tmux`
--   Install zsh plugins
-    -  Syntax autosuggestion - `git clone [<https://github.com/zsh-users/zsh-autosuggestions>](<https://github.com/zsh-users/zsh-autosuggestions>) ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-    -   Syntax highlight - `git clone <https://github.com/zsh-users/zsh-syntax-highlighting.git> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
-    -   Auto complete - `git clone [<https://github.com/zsh-users/zsh-completions>](<https://github.com/zsh-users/zsh-completions>) ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions`
+-   Install zsh plugins <br>
+    -  Syntax autosuggestion - 
+```
+  git clone [<https://github.com/zsh-users/zsh-autosuggestions>](<https://github.com/zsh-users/zsh-autosuggestions>) ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+    -   Syntax highlight - 
+```
+  git clone <https://github.com/zsh-users/zsh-syntax-highlighting.git> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+    -   Auto complete - 
+```
+  git clone [<https://github.com/zsh-users/zsh-completions>](<https://github.com/zsh-users/zsh-completions>) ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+```
 -   Generate ssh-key `ssh-keygen -t rsa` check :
     [How to manage multiple GitHub accounts on a single machine with SSH keys](https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/)
 -   Copy ssh-key to bitbucket or github or whatever.
 -   Clone [](https://github.com/jaimejazarenoiii/dotfiles)[https://github.com/jaimejazarenoiii/dotfiles](https://github.com/jaimejazarenoiii/dotfiles) and `cp -r dotfiles/ ~/` or use your own configs.
--   Run source commands:
+-   Run source commands:<br>
 
-        -   source ~/.zshrc
+        -   source ~/.zshrc<br>
         -   source ~/.vimrc
 
 -   Install tmux plugin manager
