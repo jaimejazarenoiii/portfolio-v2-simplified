@@ -231,7 +231,7 @@ Now let's break that down.
 * First I initialized the view model and the subviews of this view controller, including the DisposeBag.
 * Now if you've noticed, I didn't put `SigninViewModel` as the data type of my variable `viewModel`, instead I used the `SigninViewModelTypes. Why is that? If I've used `SigninViewModel` then I can access directly the variables within the class, which will bypass our `inputs` and `outputs protocols, which I want to use, so instead of `viewModel.inputs.someFunction()` I might accidentally use `viewModel.someFunction()` which I want to avoid.
 
-Let's skip the subview setup and focus on the bindings we have inside of `setupBindings(). Let's now break that down.
+Let's skip the subview setup and focus on the bindings we have inside of `setupBindings()`. Let's now break that down.
 
 ##### Binding of from textField to viewModel input function
 ```swift
