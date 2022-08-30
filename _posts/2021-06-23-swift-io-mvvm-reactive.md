@@ -39,11 +39,10 @@ protocol SigninViewModelTypes {
 }
 ```
 ### Breakdown:
-As you can see, I have three protocols:
-  * __Inputs__ - mainly the actions from the view controller or wherever you need this. 
-As you can see, isEmailValid and isPasswordValid are not boolean values, but instead I created an enum to identify their validity. Why is that? You'll see later.
-  * __Outputs__ - the values being exposed outside of the view model.
-  * __Types__ - the wrapper for inputs and outputs. It brings a sense of path and it's helpful with controlling accessibility from the view model. You'll see later why we need this.
+As you can see, I have three protocols: <br>
+  * __Inputs__ - mainly the actions from the view controller or wherever you need this. As you can see, isEmailValid and isPasswordValid are not boolean values, but instead I created an enum to identify their validity. Why is that? You'll see later. <br>
+  * __Outputs__ - the values being exposed outside of the view model. <br>
+  * __Types__ - the wrapper for inputs and outputs. It brings a sense of path and it's helpful with controlling accessibility from the view model. You'll see later why we need this.<br>
 
 Next is the view model implementation.
 
