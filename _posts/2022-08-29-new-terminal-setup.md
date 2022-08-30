@@ -45,7 +45,7 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
 -   Generate ssh-key `ssh-keygen -t rsa` check :
     [How to manage multiple GitHub accounts on a single machine with SSH keys](https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/)
 -   Copy ssh-key to bitbucket or github or whatever.
--   Clone [](https://github.com/jaimejazarenoiii/dotfiles)[https://github.com/jaimejazarenoiii/dotfiles](https://github.com/jaimejazarenoiii/dotfiles) and `cp -r dotfiles/ ~/` or use your own configs.
+-   Clone [dotfiles](https://github.com/jaimejazarenoiii/dotfiles) and `cp -r dotfiles/ ~/` or use your own configs.
 -   Run source commands:<br>
 
         -   source ~/.zshrc<br>
@@ -93,4 +93,4 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
 ---
 
 Some vim plugins: 
-1.  [](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)[https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)
+1.  [Ruby vim](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)[https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)
