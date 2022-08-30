@@ -3,7 +3,7 @@ layout: page
 title: "My personal setup for a new terminal as a Ruby on Rails + iOS + Flutter Engineer"
 subtitle: "Ezpz setup"
 date:   2022-08-29 21:21:21 +0800
-categories: Tech guideline
+categories: Guideline
 ---
 
 I'm currently an iOS engineer but have always been a full-stack guy at heart. Now I'll show you how I set up a new terminal based on what I need and a few desires.
