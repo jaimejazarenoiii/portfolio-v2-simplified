@@ -21,8 +21,12 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
 ```
 -   Install [iterm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 -   Install spacehip:
-    -   `git clone [<https://github.com/denysdovhan/spaceship-prompt.git>](<https://github.com/denysdovhan/spaceship-prompt.git>) "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1`
-    -   `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
+```
+  git clone [<https://github.com/denysdovhan/spaceship-prompt.git>](<https://github.com/denysdovhan/spaceship-prompt.git>) "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+```
+```
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
+```
 -   Install nerd font `brew tap homebrew/cask-fonts` then `brew install --cask font-hack-nerd-font`
 -   Install tmux `brew install tmux`
 -   Install zsh plugins <br>
