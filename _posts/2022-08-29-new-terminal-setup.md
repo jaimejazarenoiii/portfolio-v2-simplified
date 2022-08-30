@@ -93,4 +93,4 @@ I'm currently an iOS engineer but have always been a full-stack guy at heart. No
 ---
 
 Some vim plugins: 
-1.  [Ruby vim](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)[https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)
+1.  [Ruby vim](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)
