@@ -2,7 +2,7 @@
 layout: page
 title:  "View model's I/O approach applying Reactive Programming"
 subtitle: "An approach where we can distinguish and separate the coming in and coming out of data."
-date:   2016-05-20 21:21:21 +0530
+date:   2021-06-23 21:21:21 +0800
 categories: ["iOS"]
 ---
 Ever since I started using the MVVM architecture with Reactive programming, I've been searching for a similar architecture that will fit my needs and be more appealing. I found one and it's from [Kickstarter](https://github.com/kickstarter/ios-oss), albeit I did not adapt it fully, just the concept of it. 
