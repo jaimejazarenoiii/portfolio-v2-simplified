@@ -32,14 +32,6 @@ subtitle: A work in progress
 
 **APEC MSME Marketplace** - Online marketplace. - PH <span style="float: right; ">April 2017 - July 2018</span>  
 
-### EDUCATION
-
-STI College <span style="float: right; ">2014 - 2018</span>  
-**Bachelor of Science in Information Technology**  
- 
-University of the East <span style="float: right; ">2013 - 2014</span>  
-**Bachelor of Science in Information Technology**  
-
 ### EXPERIENCE
 
 Senior iOS Engineer - **Collabera PH** <span style="float: right; ">February 2022 - Current</span>  
@@ -65,6 +57,15 @@ Ruby, Rails, Vue, React, Swift, Objective-C, MVVM, Fastlane, GraphQL, Capistrano
 Web Developer(Intern) - **Gorated Innovation Labs** <span style="float: right; ">April 2017 - July 2017</span>  
 Developed and maintained backend projects.<br>
 Ruby, Rails, Capistrano, Azure
+
+### EDUCATION
+
+STI College <span style="float: right; ">2014 - 2018</span>  
+**Bachelor of Science in Information Technology**  
+ 
+University of the East <span style="float: right; ">2013 - 2014</span>  
+**Bachelor of Science in Information Technology**  
+
 
 ### INTERESTS
 
