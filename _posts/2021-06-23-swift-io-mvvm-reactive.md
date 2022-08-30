@@ -10,14 +10,14 @@ Below is a sample of what I'm using right now. I've created a simple sign-in for
 
 A note, by the way, I'm using RxSwift for the reactive part and SnapKit for constraints. Let's start!
 
-{% highlight swift %}
+```swift
 // Enum for validity check
 enum TextFieldStatus {
     case valid, notValid
 }
-{% endhighlight %}
+```
 
-{% highlight swift %}
+```swift
 import RxCocoa
 import RxSwift
 
@@ -37,8 +37,7 @@ protocol SigninViewModelTypes {
     var inputs: SigninViewModelInputs { get }
     var outputs: SigninViewModelOutputs { get }
 }
-{% endhighlight %}
-
+```
 ### Breakdown:
 As you can see, I have three protocols: <br>
   * __Inputs__ - mainly the actions from the view controller or wherever you need this. As you can see, isEmailValid and isPasswordValid are not boolean values, but instead I created an enum to identify their validity. Why is that? You'll see later. <br>
@@ -48,7 +47,7 @@ As you can see, I have three protocols: <br>
 Next is the view model implementation.
 
 ### __SigninViewModel.swift__
-{% highlight swift %}
+```swift
 class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewModelInputs {
     var inputs: SigninViewModelInputs { return self }
     var outputs: SigninViewModelOutputs { return self }
@@ -106,9 +105,9 @@ class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewM
         return emailPred.evaluate(with: email) ? .valid : .notValid
     }
 }
-{% endhighlight %}
+```
 ### Breakdown:
-{% highlight swift %}
+```swift
 private var didChangeEmailProperty = PublishSubject<String>()
 func didChange(email: String) {
     didChangeEmailProperty.onNext(email)
@@ -118,23 +117,23 @@ private var didChangePasswordProperty = PublishSubject<String>()
 func didChange(password: String) {
     didChangePasswordProperty.onNext(password)
 }
-{% endhighlight %}
+```
 As you can see, I created an internal property per input function, so that we can observe it in the `init()` rather than directly validating it.
 
 Let's now breakdown the bindings in init()
 
 ##### Check input validity
-{% highlight swift %}
+```swift
 didChangeEmailProperty.map(isValidEmail(_:)).bind(to: isEmailValid).disposed(by: disposeBag)
 didChangePasswordProperty
     .map { $0.count > 5 && $0.count < 21 ? .valid : .notValid }
     .bind(to: isPasswordValid)
     .disposed(by: disposeBag)
-{% endhighlight %}
+```
 - This just checks the inputs for email and password and if valid, then binds them to isEmailValid and isPasswordValid.
 
 ##### Return error message if not valid
-{% highlight swift %}
+```swift
 isEmailValid.filter { $0 == .notValid }
    .map { _ in "Entered email is not valid." }
    .bind(to: emailNotValidErr)
@@ -143,11 +142,11 @@ isPasswordValid.filter { $0 == .notValid }
     .map { _ in "Password has to be from 6 to 20 characters long." }
     .bind(to: passwordNotValidErrMssg)
     .disposed(by: disposeBag)
-{% endhighlight %}
+```
 - Now that isEmailValid and isPasswordValid are triggered, each now has a value, and I would like to return an error message if it is not valid.
 
 ##### Empty error message if it's valid. 
-{% highlight swift %}
+```swift
 isEmailValid.filter { $0 == .valid }
     .map { _ in "" }
     .bind(to: emailNotValidErrMssg)
@@ -157,13 +156,13 @@ isPasswordValid.filter { $0 == .valid }
     .map { _ in "" }
     .bind(to: passwordNotValidErrMssg)
     .disposed(by: disposeBag)
-{% endhighlight %}
+```
 - Now we empty the error message if it's valid.
 
 Now let's apply it to our view controller.
 
 ### __SigninViewController.swift__
-{% highlight swift %}
+```swift
 class SigninViewController: UIViewController {
 
     var viewModel: SigninViewModelTypes
@@ -225,7 +224,7 @@ class SigninViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-{% endhighlight %}
+```
 
 Now let's break that down.
 
@@ -235,7 +234,7 @@ Now let's break that down.
 Let's skip the subview setup and focus on the bindings we have inside of `setupBindings(). Let's now break that down.
 
 ##### Binding of from textField to viewModel input function
-{% highlight swift %}
+```swift
 emailTextField.rx.text.orEmpty.distinctUntilChanged()
     .bind(onNext: viewModel.inputs.didChange(email:))
     .disposed(by: disposeBag)
@@ -243,10 +242,10 @@ emailTextField.rx.text.orEmpty.distinctUntilChanged()
 passwordTextField.rx.text.orEmpty.distinctUntilChanged()
     .bind(onNext: viewModel.inputs.didChange(password:))
     .disposed(by: disposeBag)
-{% endhighlight %}
+```
 
 ##### Changing of textField's borderColor based of the entered email or password's validity
-{% highlight swift %}
+```swift
 viewModel.outputs.isEmailValid.map { $0.borderColor }
    .bind(to: emailTextField.rx.borderColor)
    .disposed(by: disposeBag)
@@ -254,10 +253,10 @@ viewModel.outputs.isEmailValid.map { $0.borderColor }
 viewModel.outputs.isPasswordValid.map { $0.borderColor }
    .bind(to: passwordTextField.rx.borderColor)
    .disposed(by: disposeBag)
-{% endhighlight %}
+```
 * Remember why I didn't use Bool and used an enum instead? This is why I wanted to attach the borderColor to the state of the textField's validity. Here's how I did it:
 
-{% highlight swift %}
+```swift
 enum TextFieldStatus {
     case valid, notValid
 
@@ -268,10 +267,10 @@ enum TextFieldStatus {
         }
     }
 }
-{% endhighlight %}
+```
 * I've added a variable named `borderColor` and defined the cgColor based on the case. That's why we're able to map isPasswordValid to a cgColor as an example and bind it to the borderColor of the textField, but wait, if you're wondering how I did that knowing that `borderColor` is not available as a `Binder` in RxSwift. Well, I created an extension and here's the code for it.
 
-{% highlight swift %}
+```swift
 extension Reactive where Base: UITextField {
     public var borderColor: Binder<CGColor> {
         return Binder(base, binding: { textField, active in
@@ -279,14 +278,14 @@ extension Reactive where Base: UITextField {
         })
     }
 }
-{% endhighlight %}
+```
 * Now I can directly bind the borderColor from the enum to the textField's borderColor.
 
 Next, I want to display the errors from the viewModel if ever the input data is not valid. Here's how to do that: 
-{% highlight swift %}
+```swift
 viewModel.outputs.emailNotValidErrMssg.bind(to: emailErrLabel.rx.text).disposed(by: disposeBag)
 viewModel.outputs.passwordNotValidErrMssg.bind(to: passwordErrLabel.rx.text).disposed(by: disposeBag)
-{% endhighlight %}
+```
 
 Now our validation for the textField is done. Here's what it looks like:
 
