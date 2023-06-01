@@ -11,8 +11,15 @@ subtitle: A work in progress
 ``` I can write in Swift and Objective-C for iOS, Kotlin and Java for Android, Dart for Flutter, and Ruby for Rails. I am also doing some devops stuff, so I am knowledgeable about AWS, DigitalOcean, and Microsoft Azure. For the soft skills, I do know Jira, Office tools, ClickUp, and Asana for project management tools and Git for version control.```  
 
 ### PROJECTS
+**Homerun** - Assigning of rider for an ordering app. - AU <span style="float: right; ">February 2022 - Current</span> 
 
-**GCash** - Philippines’ leading e-wallet. - PH <span style="float: right; ">March 2022 - Current</span>  
+**Hycon Hydraulics** - Inspection checklist app. - AU <span style="float: right; ">February 2022 - Current</span> 
+
+**Blissiree** - Mental health app. - AU <span style="float: right; ">January 2022 - Current</span> 
+
+**Hungry Mart** - Food ordering app. - AU <span style="float: right; ">October 2022 - Current</span>  
+
+**GCash** - Philippines’ leading e-wallet. - PH <span style="float: right; ">March 2022 - October 2022</span>  
 
 **Tocaro** - A mix of Slack and Jira (Communication plus project management tool app). - JP <span style="float: right; ">May 2020 - February 2022</span>  
 
@@ -33,6 +40,10 @@ subtitle: A work in progress
 **APEC MSME Marketplace** - Online marketplace. - PH <span style="float: right; ">April 2017 - July 2018</span>  
 
 ### EXPERIENCE
+
+Senior Full Stack Engineer - **BlueSky Digital Labs** <span style="float: right; ">October 2022 - Current</span>  
+Handling multiple projects solo. Doing backend, frontend and mobile for both iOS and android. Handled projects written in flutter also. Been presenting projects to client whenever needed for technical stuff. 'Am also part of the technicall planning for a project.<br>
+Flutter, Swift, Ruby on Rails, Fastlane, MVVM, Coordinator pattern, Docker, Kotlin, Stacked Architecture
 
 Senior iOS Engineer - **Collabera PH** <span style="float: right; ">February 2022 - Current</span>  
 Developing high level apps for clients like Mynt and UnionDigital. Part of the architectural planning and decision making in terms of implementing structures and guidelines.<br>
