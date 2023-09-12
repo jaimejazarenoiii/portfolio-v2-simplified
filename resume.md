@@ -11,7 +11,7 @@ subtitle: A work in progress
 ```An accomplished and versatile software engineer with a strong foundation in a wide range of programming languages and frameworks, including Swift, Java, Kotlin, JavaScript, Ruby on Rails, Flutter, and GraphQL. Demonstrated expertise in both modern application development and the maintenance and modernization of legacy codebases. Proficient in project management and agile methodologies, with a proven track record of leadership as a Scrum Master and experience managing cross-functional teams. Known for initiating Agile methodologies to address common project issues, fostering collaborative environments, and guiding teams to successful project completion. Possesses a strong commitment to delivering high-quality results while leading and motivating team members.```  
 
 ### PROJECTS
-** ArenaPlus and BingoPlus ** -  innovative online platforms offering live streaming of bingo and casino games, along with a game betting feature. These platforms deliver an immersive and dynamic gaming experience, catering to players seeking real-time gameplay and interactive features. - PH <span style="float: right; ">June 2023 - Current</span> 
+**ArenaPlus and BingoPlus** - Innovative online platforms offering live streaming of bingo and casino games, along with a game betting feature. These platforms deliver an immersive and dynamic gaming experience, catering to players seeking real-time gameplay and interactive features. - PH <span style="float: right; ">June 2023 - Current</span> 
 
 **Homerun** - Assigning of rider for an ordering app. - AU <span style="float: right; ">February 2022 - June 2023</span> 
 
