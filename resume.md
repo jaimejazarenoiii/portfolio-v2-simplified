@@ -43,11 +43,12 @@ subtitle: A work in progress
 
 ### EXPERIENCE
 
-Senior iOS Engineer - **AB Leisure Exponent Inc.** <span style="float: right;">June 2023 - Current</span><br>
+Senior iOS Engineer - **AB Leisure Exponent Inc.** <span style="float: right;">June 2023 - Current</span>
 Assigned the crucial responsibility of re-architecting a project and introducing Agile methodology to the team, addressing common issues such as workload visibility and meeting deadlines.<br>
 Initiated the Agile methodology implementation, leading to significant improvements in project management, increased visibility of tasks, and improved adherence to deadlines.<br>
 Currently serving as a dedicated Scrum Master, effectively managing a cross-functional team of 10-12 professionals, ensuring smooth project execution and team collaboration.<br>
-Solely responsible for managing the iOS part of ArenaPlus, demonstrating self-reliance and technical proficiency.
+Solely responsible for managing the iOS part of ArenaPlus, demonstrating self-reliance and technical proficiency.<br>
+Swift, SwiftUI, Composable Architecture, Fastlane, MVVM, Agile
 
 Senior Full Stack Engineer - **BlueSky Digital Labs** <span style="float: right; ">October 2022 - June 2023</span>  
 Engineered modern applications using a diverse set of technologies including Swift, Java, Kotlin, JavaScript, Ruby on Rails, Flutter, and GraphQL, showcasing a broad skill set and adaptability across multiple languages and frameworks.<br>
