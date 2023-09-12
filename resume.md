@@ -43,7 +43,7 @@ subtitle: A work in progress
 
 ### EXPERIENCE
 
-Senior iOS Engineer - **AB Leisure Exponent Inc.** <span style="float: right;">June 2023 - Current</span>
+Senior iOS Engineer - **AB Leisure Exponent Inc.** <span style="float: right;">June 2023 - Current</span><br>
 Assigned the crucial responsibility of re-architecting a project and introducing Agile methodology to the team, addressing common issues such as workload visibility and meeting deadlines.<br>
 Initiated the Agile methodology implementation, leading to significant improvements in project management, increased visibility of tasks, and improved adherence to deadlines.<br>
 Currently serving as a dedicated Scrum Master, effectively managing a cross-functional team of 10-12 professionals, ensuring smooth project execution and team collaboration.<br>
