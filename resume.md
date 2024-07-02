@@ -10,7 +10,9 @@ subtitle: A work in progress
 ```An accomplished and versatile software engineer with a strong foundation in a wide range of programming languages and frameworks, including Swift, Java, Kotlin, JavaScript, Ruby on Rails, Flutter, and GraphQL. Demonstrated expertise in both modern application development and the maintenance and modernization of legacy codebases. Proficient in project management and agile methodologies, with a proven track record of leadership as a Technical Lead and experience managing cross-functional teams. Known for initiating Agile methodologies to address common project issues, fostering collaborative environments, and guiding teams to successful project completion. Possesses a strong commitment to delivering high-quality results while providing leadership and motivation to team members.```  
 
 ### PROJECTS
-**ArenaPlus and BingoPlus** - Innovative online platforms offering live streaming of bingo and casino games, along with a game betting feature. These platforms deliver an immersive and dynamic gaming experience, catering to players seeking real-time gameplay and interactive features. - PH <span style="float: right; ">June 2023 - Current</span> 
+**Alaska Airlines** - An ultimate travel companion designed for seamless journeys across the skies. It allows users to effortlessly manage flights, from booking and check-in to real-time updates and exclusive offers. The intuitive interface ensures convenience and peace of mind. - AK <span style="float: right; ">June 2023 - October 2023</span> 
+
+**ArenaPlus and BingoPlus** - Innovative online platforms offering live streaming of bingo and casino games, along with a game betting feature. These platforms deliver an immersive and dynamic gaming experience, catering to players seeking real-time gameplay and interactive features. - PH <span style="float: right; ">June 2023 - October 2023</span> 
 
 **Homerun** - Assigning of rider for an ordering app. - AU <span style="float: right; ">February 2022 - June 2023</span> 
 
@@ -41,6 +43,11 @@ subtitle: A work in progress
 **APEC MSME Marketplace** - Online marketplace. - PH <span style="float: right; ">April 2017 - July 2018</span>  
 
 ### EXPERIENCE
+Sr. Software Engineer II - **Cognizant Philippines** <span style="float: right;">October 2023 - Current</span><br>
+Focused on advancing the iOS architecture of the Alaska Airlines app, I contributed expertise in Swift and SwiftUI to enhance scalability, performance, and user experience. With a keen eye for detail and adherence to iOS development best practices, I optimized the app's architecture for flexibility and maintainability.<br>
+
+As the lead iOS developer, I took ownership of critical iOS components, ensuring seamless integration and efficient workflows. Through continuous innovation and rigorous quality assurance, I played a key role in evolving the app's functionality and enhancing overall user satisfaction.<br>
+Swift, SwiftUI, MVVM, Scaled Agile Framework(SAFe)
 
 Senior iOS Engineer - **AB Leisure Exponent Inc.** <span style="float: right;">June 2023 - Current</span><br>
 Assigned the crucial responsibility of re-architecting a project and introducing Agile methodology to the team, addressing common issues such as workload visibility and meeting deadlines.<br>
