@@ -17,8 +17,10 @@ prose: false
     <li class="blog-card">
       <a href="{{ post.url | prepend: site.baseurl }}" class="blog-card__link">
         <span class="blog-card__title">{{ post.title }}</span>
-        <span class="blog-card__date">{{ post.date | date: "%d %B %Y" }}</span>
-        <span class="blog-card__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="blog-card__aside">
+          <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+          <span class="blog-card__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </span>
       </a>
     </li>
     {% endfor %}
