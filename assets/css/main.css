@@ -1274,6 +1274,11 @@ body.is-menu-open::after {
 
   .hero__title-line {
     max-width: 100%;
+    white-space: normal;
+  }
+
+  .hero__title-gradient {
+    white-space: normal;
   }
 
   .hero__subtitle {
