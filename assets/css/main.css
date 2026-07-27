@@ -415,7 +415,9 @@ body.is-menu-open::after {
 
 .hero__avatar-wrap {
   position: relative;
-  animation: fade-up 0.8s var(--ease-out) 0.15s both;
+  flex-shrink: 0;
+  overflow: visible;
+  animation: fade-in 0.8s var(--ease-out) 0.15s both;
 }
 
 .hero__avatar-ring {
@@ -425,6 +427,9 @@ body.is-menu-open::after {
   background: conic-gradient(from 0deg, var(--accent), #818cf8, var(--accent-warm), var(--accent));
   animation: spin-slow 8s linear infinite;
   opacity: 0.6;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hero__avatar-ring::after {
@@ -436,6 +441,7 @@ body.is-menu-open::after {
 }
 
 @keyframes spin-slow {
+  from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
@@ -1274,6 +1280,16 @@ body.is-menu-open::after {
   .hero__avatar-wrap {
     order: -1;
     margin-inline: auto;
+    overflow: visible;
+  }
+
+  .hero__avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero__avatar-ring {
+    inset: -10px;
   }
 
   .hero__stats {
