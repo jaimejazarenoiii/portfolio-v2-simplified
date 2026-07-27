@@ -5,12 +5,12 @@
 {% include externals/styling.html %}
 </head>
 <body class="has-texture{% if page.body_class %} {{ page.body_class }}{% endif %}">
-<div class="site">
 {% include header.html %}
+{% include mobile-nav.html %}
+<div class="site">
 {{ content }}
 {% include footer.html %}
 </div>
-{% include mobile-nav.html %}
 {% include externals/scripting.html %}
 </body>
 </html>
