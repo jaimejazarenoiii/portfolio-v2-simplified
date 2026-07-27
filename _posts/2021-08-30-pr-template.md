@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  "Personal PR Template"
 subtitle: "A template I usually introduce to companies if they still don't have one."
 date:   2022-08-30 21:21:21 +0800

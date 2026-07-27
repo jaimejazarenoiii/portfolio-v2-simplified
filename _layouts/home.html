@@ -1,0 +1,82 @@
+---
+layout: default
+---
+{% include hero.html %}
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">About</span>
+        <h2 class="section__title">Building products that matter</h2>
+        <p class="section__desc">Full stack engineer with a curiosity for the unknown and a drive to ship things that help people every day.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-card__icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="about-card__title">Engineering</h3>
+          <p class="about-card__text">From iOS architecture at Alaska Airlines to full-stack across Swift, Flutter, Rails, and GraphQL — I build scalable systems with real impact.</p>
+        </div>
+        <div class="about-card reveal reveal-delay-2">
+          <div class="about-card__icon"><i class="fa-solid fa-users"></i></div>
+          <h3 class="about-card__title">Leadership</h3>
+          <p class="about-card__text">Technical lead and Scrum Master experience managing cross-functional teams. Agile advocate who turns chaos into shipped software.</p>
+        </div>
+        <div class="about-card reveal reveal-delay-3">
+          <div class="about-card__icon"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="about-card__title">Life</h3>
+          <p class="about-card__text">Family man. Melophile. Hooper. Into photography and art. Stoic. Curiosity is what got me into programming — and what keeps me going.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Stack</span>
+        <h2 class="section__title">Technologies I work with</h2>
+      </div>
+      <div class="stack reveal">
+        <span class="stack__pill">Swift</span>
+        <span class="stack__pill">SwiftUI</span>
+        <span class="stack__pill">Flutter</span>
+        <span class="stack__pill">Kotlin</span>
+        <span class="stack__pill">Ruby on Rails</span>
+        <span class="stack__pill">GraphQL</span>
+        <span class="stack__pill">JavaScript</span>
+        <span class="stack__pill">MVVM</span>
+        <span class="stack__pill">RxSwift</span>
+        <span class="stack__pill">Fastlane</span>
+        <span class="stack__pill">Docker</span>
+        <span class="stack__pill">AWS</span>
+        <span class="stack__pill">Azure</span>
+        <span class="stack__pill">Agile / SAFe</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Recent</span>
+        <h2 class="section__title">Latest writing</h2>
+      </div>
+      <ul class="blog-list reveal">
+        {% assign recent = site.posts | limit: 3 %}
+        {% for post in recent %}
+        <li class="blog-card">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="blog-card__link">
+            <span class="blog-card__title">{{ post.title }}</span>
+            <span class="blog-card__date">{{ post.date | date: "%d %b %Y" }}</span>
+            <span class="blog-card__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div style="margin-top: 24px;" class="reveal">
+        <a href="{{ '/blog' | prepend: site.baseurl }}" class="btn btn--ghost">View all posts <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+</main>

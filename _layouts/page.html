@@ -1,8 +1,35 @@
 ---
 layout: default
 ---
-{% include page/title.html %}
-
-{{ content }}
-
-{% include page/about.html %}
+<main>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-header__title reveal">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-header__subtitle reveal reveal-delay-1">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.url contains '/resume' %}
+      <div class="page-header__actions reveal reveal-delay-2">
+        <a href="{{ '/assets/resume.pdf' | prepend: site.baseurl }}" class="btn btn--primary" download>
+          <i class="fa-solid fa-download"></i> Download PDF
+        </a>
+      </div>
+      {% elsif page.header_action %}
+      <div class="page-header__actions reveal reveal-delay-2">
+        {{ page.header_action }}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <div class="content content--wide container">
+    {% if page.prose != false %}
+    <div class="prose reveal">
+      {{ content }}
+    </div>
+    {% else %}
+    <div class="reveal">
+      {{ content }}
+    </div>
+    {% endif %}
+  </div>
+</main>

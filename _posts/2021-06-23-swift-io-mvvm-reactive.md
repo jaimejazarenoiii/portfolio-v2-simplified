@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  "View model's I/O approach applying Reactive Programming"
 subtitle: "An approach where we can distinguish and separate the coming in and coming out of data."
 date:   2021-06-23 21:21:21 +0800

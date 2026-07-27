@@ -1,10 +1,18 @@
 ---
 layout: default
 ---
-{% include page/title.html %}
-
-<div class="center-text">
-{{ content }}
-</div>
-
-{% include page/about.html %}
+<main>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-header__title reveal">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-header__subtitle reveal reveal-delay-1">{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+  </header>
+  <div class="content content--narrow container">
+    <div class="prose reveal" style="text-align: center;">
+      {{ content }}
+    </div>
+  </div>
+</main>

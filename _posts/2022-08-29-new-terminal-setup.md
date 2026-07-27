@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "My personal setup for a new terminal as a Ruby on Rails + iOS + Flutter Engineer"
 subtitle: "Ezpz setup"
 date:   2022-08-29 21:21:21 +0800

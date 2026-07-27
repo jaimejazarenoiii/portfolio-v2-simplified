@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Résumé
-subtitle: A work in progress
+subtitle: Full stack engineer · iOS lead · Technical lead
 ---
 
-<span style="float: right; "><a href="{{ '/assets/resume.pdf' | prepend: site.baseurl }}"><strong>> Download as PDF</strong></a> </span>
-<br>
-
-```An accomplished and versatile software engineer with a strong foundation in a wide range of programming languages and frameworks, including Swift, Java, Kotlin, JavaScript, Ruby on Rails, Flutter, and GraphQL. Demonstrated expertise in both modern application development and the maintenance and modernization of legacy codebases. Proficient in project management and agile methodologies, with a proven track record of leadership as a Technical Lead and experience managing cross-functional teams. Known for initiating Agile methodologies to address common project issues, fostering collaborative environments, and guiding teams to successful project completion. Possesses a strong commitment to delivering high-quality results while providing leadership and motivation to team members.```  
+<div class="summary-card reveal">
+An accomplished and versatile software engineer with a strong foundation in a wide range of programming languages and frameworks, including Swift, Java, Kotlin, JavaScript, Ruby on Rails, Flutter, and GraphQL. Demonstrated expertise in both modern application development and the maintenance and modernization of legacy codebases. Proficient in project management and agile methodologies, with a proven track record of leadership as a Technical Lead and experience managing cross-functional teams.
+</div>
 
 ### PROJECTS
 **Alaska Airlines** - An ultimate travel companion designed for seamless journeys across the skies. It allows users to effortlessly manage flights, from booking and check-in to real-time updates and exclusive offers. The intuitive interface ensures convenience and peace of mind. - AK <span style="float: right; ">October 2023 - Current</span> 

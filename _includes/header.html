@@ -1,56 +1,59 @@
-<header class="header">
-    <div class="navigation">
-        <a href="{{ '/' | prepend: site.baseurl }}" class="logo">{{ site.title }}</a>
-        <ul class="menu">
-            <li class="menu__entry"><a href="{{ '/resume' | prepend: site.baseurl }}">Resume</a></li>
-            <li class="menu__entry"><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li>
-        </ul>
-    </div>
-    <ul class="social-links">
-        {% if site.author.email %}
-        <a href="mailto:{{ site.author.email }}" class="social-links__entry" target="_blank">
-            <i class="fa fa-envelope-square"></i>
-        </a>
-        {% endif %}
-        {% if site.author.github %}
-        <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        {% endif %}
-        {% if site.author.linkedin %}
-        <a href="https://in.linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        {% endif %}
-        {% if site.author.devto %}
-        <a href="https://dev.to/{{ site.author.devto }}" class="social-links__entry" target="_blank">
-            <i class="fab fa-dev"></i>
-        </a>
-        {% endif %}
-        {% if site.author.medium %}
-        <a href="https://medium.com/{{ site.author.medium }}" class="social-links__entry" target="_blank">
-            <i class="fa-brands fa-medium"></i>
-        </a>
-        {% endif %}
-        {% if site.author.lastfm %}
-        <a href="https://last.fm/user/{{ site.author.lastfm }}" class="social-links__entry" target="_blank">
-            <i class="fab fa-lastfm"></i>
-        </a>
-        {% endif %}
-        {% if site.author.instagram %}
-        <a href="https://instagram.com/{{ site.author.instagram }}" class="social-links__entry" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        {% endif %}
-        {% if site.author.photography %}
-        <a href="https://instagram.com/{{ site.author.photography }}" class="social-links__entry" target="_blank">
-            <i class="fa-solid fa-camera-retro"></i>
-        </a>
-        {% endif %}
-        {% if site.author.twitter %}
-        <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-        {% endif %}
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="container nav__inner">
+    <a href="{{ '/' | prepend: site.baseurl }}" class="nav__logo">
+      <span class="nav__logo-dot"></span>
+      {{ site.title }}
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="{{ '/' | prepend: site.baseurl }}" class="nav__link">Home</a></li>
+      <li><a href="{{ '/resume' | prepend: site.baseurl }}" class="nav__link">Resume</a></li>
+      <li><a href="{{ '/blog' | prepend: site.baseurl }}" class="nav__link">Blog</a></li>
     </ul>
-</header>
+
+    <ul class="nav__social">
+      {% if site.author.github %}
+      <li>
+        <a href="https://github.com/{{ site.author.github }}" class="nav__social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      {% endif %}
+      {% if site.author.linkedin %}
+      <li>
+        <a href="https://in.linkedin.com/in/{{ site.author.linkedin }}" class="nav__social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      {% endif %}
+      {% if site.author.email %}
+      <li>
+        <a href="mailto:{{ site.author.email }}" class="nav__social-link" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="nav__mobile">
+    <a href="{{ '/' | prepend: site.baseurl }}" class="nav__link">Home</a>
+    <a href="{{ '/resume' | prepend: site.baseurl }}" class="nav__link">Resume</a>
+    <a href="{{ '/blog' | prepend: site.baseurl }}" class="nav__link">Blog</a>
+    <div class="nav__mobile-social">
+      {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}" class="nav__social-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      {% endif %}
+      {% if site.author.linkedin %}
+      <a href="https://in.linkedin.com/in/{{ site.author.linkedin }}" class="nav__social-link" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      {% endif %}
+      {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}" class="nav__social-link"><i class="fa-solid fa-envelope"></i></a>
+      {% endif %}
+    </div>
+  </div>
+</nav>

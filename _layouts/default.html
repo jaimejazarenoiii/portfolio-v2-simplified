@@ -4,10 +4,11 @@
 {% include meta_tags/base.html %}
 {% include externals/styling.html %}
 </head>
-<body>
-<div class="wrapper">
+<body class="has-texture{% if page.body_class %} {{ page.body_class }}{% endif %}">
+<div class="site">
 {% include header.html %}
 {{ content }}
+{% include footer.html %}
 </div>
 {% include externals/scripting.html %}
 </body>

@@ -1,0 +1,66 @@
+<section class="hero">
+  <div class="hero__bg">
+    <img src="{{ '/assets/img/hero-bg.png' | prepend: site.baseurl }}" alt="" aria-hidden="true" loading="eager">
+    <div class="hero__bg-overlay"></div>
+  </div>
+  <div class="hero__orbs" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+  </div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <div class="hero__text">
+      <div class="hero__eyebrow">
+        <span class="hero__eyebrow-dot"></span>
+        Available for great work
+      </div>
+      <h1 class="hero__title">
+        Hi, I'm <span class="hero__title-gradient">{{ site.author.fullname }}</span>
+      </h1>
+      <p class="hero__subtitle">
+        Full stack engineer crafting mobile &amp; web products with impact.
+        Family man · Melophile · Improving every day.
+      </p>
+      <div class="hero__actions">
+        <a href="{{ '/resume' | prepend: site.baseurl }}" class="btn btn--primary">
+          View résumé <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="{{ '/blog' | prepend: site.baseurl }}" class="btn btn--ghost">
+          Read the blog
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-value">8+</div>
+          <div class="hero__stat-label">Years experience</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">20+</div>
+          <div class="hero__stat-label">Projects shipped</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">iOS · Web</div>
+          <div class="hero__stat-label">Full stack</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__avatar-wrap">
+      <div class="hero__avatar-ring"></div>
+      <img
+        src="{{ '/assets/img/avatar.png' | prepend: site.baseurl }}"
+        alt="{{ site.author.fullname }}"
+        class="hero__avatar"
+        width="220"
+        height="220"
+      >
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
