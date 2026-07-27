@@ -2,6 +2,7 @@
 layout: page
 title: Résumé
 subtitle: Full stack engineer · iOS lead · Technical lead
+permalink: /resume/
 ---
 
 <div class="summary-card reveal">

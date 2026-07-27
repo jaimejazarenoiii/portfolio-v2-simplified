@@ -7,9 +7,10 @@ description: >
 baseurl: "" # leave empty when the site is served from the domain root
 url: "https://jaimejazarenoiii.me" # the base hostname & protocol for your site
 
-social_image: /assets/img/og-image.png
-social_image_width: 1376
-social_image_height: 768
+social_image: /assets/img/og-image.jpg
+social_image_type: image/jpeg
+social_image_width: 1200
+social_image_height: 630
 social_image_alt: "Jaime Jazareno III — Full stack engineer portfolio"
 
 author:

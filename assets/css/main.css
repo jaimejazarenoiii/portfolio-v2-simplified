@@ -39,6 +39,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 body {
@@ -48,7 +49,7 @@ body {
   line-height: 1.65;
   color: var(--text);
   background: var(--bg);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body::before {
@@ -103,6 +104,8 @@ a:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .container {
@@ -737,6 +740,7 @@ body.is-menu-open::after {
 
 .prose p {
   margin: 0 0 1.25em;
+  overflow-wrap: anywhere;
 }
 
 .prose strong {
@@ -777,6 +781,7 @@ body.is-menu-open::after {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow-x: auto;
+  max-width: 100%;
 }
 
 .prose pre code {
@@ -1226,6 +1231,8 @@ body.is-menu-open::after {
 
 .prose span[style*="float"] {
   float: right;
+  clear: right;
+  margin-left: 12px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-dim);
@@ -1357,6 +1364,27 @@ body.is-menu-open::after {
 
   .section {
     padding-block: 64px;
+  }
+
+  .prose span[style*="float"] {
+    float: none !important;
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+    text-align: right;
+    white-space: normal;
+  }
+
+  .prose p:has(strong:first-child) {
+    padding: 14px 16px;
+  }
+
+  .content,
+  .content--wide,
+  .content--narrow,
+  main {
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .blog-card__link {
