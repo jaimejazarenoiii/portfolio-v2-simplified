@@ -40,20 +40,3 @@
     </button>
   </div>
 </nav>
-
-<div class="nav__mobile" id="nav-mobile">
-  <a href="{{ '/' | prepend: site.baseurl }}" class="nav__link">Home</a>
-  <a href="{{ '/resume' | prepend: site.baseurl }}" class="nav__link">Resume</a>
-  <a href="{{ '/blog' | prepend: site.baseurl }}" class="nav__link">Blog</a>
-  <div class="nav__mobile-social">
-    {% if site.author.github %}
-    <a href="https://github.com/{{ site.author.github }}" class="nav__social-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-    {% endif %}
-    {% if site.author.linkedin %}
-    <a href="https://in.linkedin.com/in/{{ site.author.linkedin }}" class="nav__social-link" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-    {% endif %}
-    {% if site.author.email %}
-    <a href="mailto:{{ site.author.email }}" class="nav__social-link"><i class="fa-solid fa-envelope"></i></a>
-    {% endif %}
-  </div>
-</div>

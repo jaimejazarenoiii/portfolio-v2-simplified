@@ -16,6 +16,7 @@
   if (toggle && mobile) {
     var setMenuOpen = function (open) {
       mobile.classList.toggle("is-open", open);
+      mobile.setAttribute("aria-hidden", open ? "false" : "true");
       if (nav) nav.classList.toggle("is-menu-open", open);
       document.body.classList.toggle("is-menu-open", open);
       toggle.setAttribute("aria-expanded", open);
