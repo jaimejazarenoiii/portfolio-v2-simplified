@@ -14,19 +14,23 @@
   }
 
   if (toggle && mobile) {
-    toggle.addEventListener("click", function () {
-      var open = mobile.classList.toggle("is-open");
+    var setMenuOpen = function (open) {
+      mobile.classList.toggle("is-open", open);
+      if (nav) nav.classList.toggle("is-menu-open", open);
+      document.body.classList.toggle("is-menu-open", open);
       toggle.setAttribute("aria-expanded", open);
       toggle.innerHTML = open
         ? '<i class="fa-solid fa-xmark"></i>'
         : '<i class="fa-solid fa-bars"></i>';
+    };
+
+    toggle.addEventListener("click", function () {
+      setMenuOpen(!mobile.classList.contains("is-open"));
     });
 
     mobile.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        mobile.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        setMenuOpen(false);
       });
     });
   }

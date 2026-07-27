@@ -127,6 +127,12 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.nav.is-menu-open {
+  background: var(--bg);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--border);
+}
+
 .nav__inner {
   display: flex;
   align-items: center;
@@ -221,6 +227,10 @@ a:hover {
 
 .nav__mobile {
   display: none;
+}
+
+body.is-menu-open {
+  overflow: hidden;
 }
 
 /* ── Hero ────────────────────────────────────────────────────── */
@@ -1256,15 +1266,12 @@ a:hover {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 24px;
-    background: rgba(7, 7, 13, 0.96);
-    backdrop-filter: blur(20px);
+    inset: 0;
+    z-index: 99;
+    padding: calc(var(--nav-height) + 24px) 24px 24px;
+    background: var(--bg);
     gap: 8px;
-    animation: fade-up 0.3s var(--ease-out);
+    animation: fade-in 0.25s var(--ease-out);
   }
 
   .nav__mobile .nav__link {
